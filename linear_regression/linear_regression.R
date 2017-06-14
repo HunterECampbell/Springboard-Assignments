@@ -30,7 +30,7 @@ list.files("dataSets") # files in the dataSets folder
 ## ────────────────────────
 
 # read the states data
-states.data <- readRDS("dataSets/states.rds") 
+states.data <- readRDS("https://github.com/hcnureth/Springboard-Assignments/blob/master/linear_regression/dataSets/states.rds") 
 #get labels
 states.info <- data.frame(attributes(states.data)[c("names", "var.labels")])
 #look at last few labels
