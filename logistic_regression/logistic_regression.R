@@ -24,7 +24,7 @@
 
 ##   Load the National Health Interview Survey data:
 
-NH11 <- readRDS("dataSets/NatHealth2011.rds")
+NH11 <- readRDS("https://github.com/hcnureth/Springboard-Assignments/blob/master/logistic_regression/dataSets/NatHealth2011.rds")
 labs <- attributes(NH11)$labels
 
 ##   [CDC website] http://www.cdc.gov/nchs/nhis.htm
