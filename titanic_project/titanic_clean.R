@@ -4,7 +4,7 @@ library("tidyr")
 library("dplyr")
 
 #load in the csv file
-titanic_original <- read.csv("C:/Users/hcnur_000/OneDrive/Documents/titanic_project/titanic_original.csv")
+titanic_original <- read.csv("https://github.com/hcnureth/Springboard-Assignments/blob/master/titanic_project/titanic_original.csv")
 
 #create clean object
 titanic_clean <- titanic_original
@@ -32,5 +32,3 @@ titanic_clean$boat[titanic_clean$boat == ""] <- "NA"
 sum(is.na(titanic_clean$cabin))  #this returns 0
 sum(titanic_clean$cabin == "")  #this returns 1014
 titanic_clean <- mutate(titanic_clean, has_cabin_number = ifelse(titanic_clean$cabin == "", 0, 1))
-
-write.csv(titanic_clean, "C:/Users/hcnur_000/OneDrive/Documents/titanic_project/titanic_clean.csv")
