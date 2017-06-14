@@ -5,7 +5,7 @@ library("tidyr")
 library("dplyr")
 
 #load csv file
-refine_original <- read.csv("C:/Users/hcnur_000/OneDrive/Documents/refine_project/refine_original.csv")
+refine_original <- read.csv("https://github.com/hcnureth/Springboard-Assignments/blob/master/refine_project/refine_original.csv")
 
 #this was to alphabetize the company column
 refine_clean <- refine_original %>% arrange(company)
@@ -39,5 +39,3 @@ refine_clean <- mutate(refine_clean, product_smartphone = ifelse(product_categor
 refine_clean <- mutate(refine_clean, product_tv = ifelse(product_category == "TV", 1, 0))
 refine_clean <- mutate(refine_clean, product_laptop = ifelse(product_category == "Laptop", 1, 0))
 refine_clean <- mutate(refine_clean, product_tablet = ifelse(product_category == "Tablet", 1, 0))
-
-write.csv(refine_clean, "C:/Users/hcnur_000/OneDrive/Documents/refine_project/refine_clean.csv")
